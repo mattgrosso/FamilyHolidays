@@ -4,7 +4,7 @@ var db = firebase.firestore();
 
 var members = db.collection("members");
 
-members.doc().set({
+members.doc("marie-dennis").set({
   name: {
     first: "Marie",
     middle: "Adele",
@@ -18,7 +18,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("bethann-slater").set({
   name: {
     first: "Elizabeth",
     middle: "Ann",
@@ -32,7 +32,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("rucker-slater").set({
   name: {
     first: "Robert",
     middle: "Rucker",
@@ -46,7 +46,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("cassella-slater").set({
   name: {
     first: "Cassella",
     middle: "Marie",
@@ -59,7 +59,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("megann-smith").set({
   name: {
     first: "Margaret",
     middle: "Ann",
@@ -73,7 +73,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("adam-smith").set({
   name: {
     first: "Adam",
     last: "Smith",
@@ -85,7 +85,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("cati-adele-slater").set({
   name: {
     first: "Catherine",
     middle: "Adele",
@@ -99,7 +99,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("bobby-slater").set({
   name: {
     first: "Robert",
     middle: "Rucker",
@@ -113,7 +113,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("cathi-grosso").set({
   name: {
     first: "Catherine",
     middle: "Marie",
@@ -127,7 +127,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("stephen-gasteyer").set({
   name: {
     first: "Stephen",
     last: "Gasteyer",
@@ -139,7 +139,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("marie-adele-gasteyer-grosso").set({
   name: {
     first: "Marie Adele",
     last: "Gasteyer Grosso",
@@ -151,7 +151,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("michael-grosso").set({
   name: {
     first: "Michael",
     middle: "Edward",
@@ -164,7 +164,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("lesley-grosso").set({
   name: {
     first: "Lesley",
     last: "Grosso",
@@ -176,7 +176,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("felix-grosso").set({
   name: {
     first: "Felix",
     last: "Grosso",
@@ -188,7 +188,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("david-grosso").set({
   name: {
     first: "David",
     middle: "Paul",
@@ -201,7 +201,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("serra-sippel").set({
   name: {
     first: "Serra",
     last: "Sippel",
@@ -213,7 +213,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("christine-patrick").set({
   name: {
     first: "Christine",
     middle: "A",
@@ -226,7 +226,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("brian-patrick").set({
   name: {
     first: "Christopher",
     middle: "Brian",
@@ -240,7 +240,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("lauren-patrick").set({
   name: {
     first: "Lauren",
     middle: "Madeline",
@@ -253,7 +253,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("jonathon-patrick").set({
   name: {
     first: "Jonathon",
     last: "Patrick",
@@ -265,7 +265,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("matthew-grosso").set({
   name: {
     first: "Matthew",
     middle: "John",
@@ -279,7 +279,7 @@ members.doc().set({
   }
 });
 
-  members.doc().set({
+  members.doc("carrie-seltzer").set({
   name: {
     first: "Carrie",
     middle: "Elizabeth",
@@ -292,7 +292,7 @@ members.doc().set({
   }
 });
 
-members.doc().set({
+members.doc("natalie-grosso").set({
   name: {
     first: "Natalie",
     middle: "Rose",
