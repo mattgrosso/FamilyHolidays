@@ -12,7 +12,10 @@ members.doc().set({
     nick: "Grand",
     full: "Marie Dennis"
   },
-  family: "Dennis"
+  family: "Dennis",
+  secretSanta: {
+    pool: "adults"
+  }
 });
 
 members.doc().set({
@@ -23,7 +26,10 @@ members.doc().set({
     nick: "BethAnn",
     full: "BethAnn Slater"
   },
-  family: "Slater"
+  family: "Slater",
+  secretSanta: {
+    pool: "adults"
+  }
 });
 
 members.doc().set({
@@ -34,7 +40,10 @@ members.doc().set({
     nick: "Rucker",
     full: "Rucker Slater"
   },
-  family: "Slater"
+  family: "Slater",
+  secretSanta: {
+    pool: "adults"
+  }
 });
 
 members.doc().set({
@@ -44,7 +53,10 @@ members.doc().set({
     last: "Slater",
     full: "Cassella Slater"
   },
-  family: "Slater"
+  family: "Slater",
+  secretSanta: {
+    pool: "adults"
+  }
 });
 
 members.doc().set({
@@ -55,7 +67,10 @@ members.doc().set({
     nick: "MegAnn",
     full: "MegAnn Smith"
   },
-  family: "Slater"
+  family: "Slater",
+  secretSanta: {
+    pool: "adults"
+  }
 });
 
 members.doc().set({
@@ -64,7 +79,10 @@ members.doc().set({
     last: "Smith",
     full: "Adam Smith"
   },
-  family: "Slater"
+  family: "Slater",
+  secretSanta: {
+    pool: "adults"
+  }
 });
 
 members.doc().set({
@@ -75,7 +93,10 @@ members.doc().set({
     nick: "Cati Adele",
     full: "Cati Adele Slater"
   },
-  family: "Slater"
+  family: "Slater",
+  secretSanta: {
+    pool: "adults"
+  }
 });
 
 members.doc().set({
@@ -86,7 +107,10 @@ members.doc().set({
     nick: "Bobby",
     full: "Bobby Slater"
   },
-  family: "Slater"
+  family: "Slater",
+  secretSanta: {
+    pool: "adults"
+  }
 });
 
 members.doc().set({
@@ -97,7 +121,10 @@ members.doc().set({
     nick: "Cathi",
     full: "Cathi Grosso"
   },
-  family: "Grosso-Gasteyer"
+  family: "Grosso-Gasteyer",
+  secretSanta: {
+    pool: "adults"
+  }
 });
 
 members.doc().set({
@@ -106,7 +133,10 @@ members.doc().set({
     last: "Gasteyer",
     full: "Stephen Gasteyer"
   },
-  family: "Grosso-Gasteyer"
+  family: "Grosso-Gasteyer",
+  secretSanta: {
+    pool: "adults"
+  }
 });
 
 members.doc().set({
@@ -115,7 +145,10 @@ members.doc().set({
     last: "Gasteyer Grosso",
     full: "Marie Adele Gasteyer Grosso"
   },
-  family: "Grosso-Gasteyer"
+  family: "Grosso-Gasteyer",
+  secretSanta: {
+    pool: "kids"
+  }
 });
 
 members.doc().set({
@@ -125,7 +158,10 @@ members.doc().set({
     last: "Grosso",
     full: "Michael Grosso"
   },
-  family: "Grosso"
+  family: "Grosso",
+  secretSanta: {
+    pool: "adults"
+  }
 });
 
 members.doc().set({
@@ -134,7 +170,10 @@ members.doc().set({
     last: "Grosso",
     full: "Lesley Grosso"
   },
-  family: "Grosso"
+  family: "Grosso",
+  secretSanta: {
+    pool: "adults"
+  }
 });
 
 members.doc().set({
@@ -143,7 +182,10 @@ members.doc().set({
     last: "Grosso",
     full: "Felix Grosso"
   },
-  family: "Grosso"
+  family: "Grosso",
+  secretSanta: {
+    pool: "kids"
+  }
 });
 
 members.doc().set({
@@ -153,7 +195,10 @@ members.doc().set({
     last: "Grosso",
     full: "David Grosso"
   },
-  family: "Grosso-Sippel"
+  family: "Grosso-Sippel",
+  secretSanta: {
+    pool: "adults"
+  }
 });
 
 members.doc().set({
@@ -162,7 +207,10 @@ members.doc().set({
     last: "Sippel",
     full: "Serra Sippel"
   },
-  family: "Grosso-Sippel"
+  family: "Grosso-Sippel",
+  secretSanta: {
+    pool: "adults"
+  }
 });
 
 members.doc().set({
@@ -172,7 +220,10 @@ members.doc().set({
     last: "Patrick",
     full: "Christine Patrick"
   },
-  family: "Patrick"
+  family: "Patrick",
+  secretSanta: {
+    pool: "adults"
+  }
 });
 
 members.doc().set({
@@ -183,7 +234,10 @@ members.doc().set({
     nick: "Brian",
     full: "Brian Patrick"
   },
-  family: "Patrick"
+  family: "Patrick",
+  secretSanta: {
+    pool: "adults"
+  }
 });
 
 members.doc().set({
@@ -193,7 +247,10 @@ members.doc().set({
     last: "Patrick",
     full: "Lauren Patrick"
   },
-  family: "Patrick"
+  family: "Patrick",
+  secretSanta: {
+    pool: "adults"
+  }
 });
 
 members.doc().set({
@@ -202,7 +259,10 @@ members.doc().set({
     last: "Patrick",
     full: "Jonathon Patrick"
   },
-  family: "Patrick"
+  family: "Patrick",
+  secretSanta: {
+    pool: "kids"
+  }
 });
 
 members.doc().set({
@@ -213,17 +273,23 @@ members.doc().set({
     nick: "Matt",
     full: "Matthew Grosso"
   },
-  family: "Grosso-Seltzer"
+  family: "Grosso-Seltzer",
+  secretSanta: {
+    pool: "adults"
+  }
 });
 
-members.doc().set({
+  members.doc().set({
   name: {
     first: "Carrie",
     middle: "Elizabeth",
     last: "Seltzer",
     full: "Carrie Seltzer"
   },
-  family: "Grosso-Seltzer"
+  family: "Grosso-Seltzer",
+  secretSanta: {
+    pool: "adults"
+  }
 });
 
 members.doc().set({
@@ -233,7 +299,10 @@ members.doc().set({
     last: "Grosso",
     full: "Natalie Grosso"
   },
-  family: "Grosso-Seltzer"
+  family: "Grosso-Seltzer",
+  secretSanta: {
+    pool: "kids"
+  }
 });
 
 members.get().then((members) => {
