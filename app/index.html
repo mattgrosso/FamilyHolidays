@@ -6,9 +6,17 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <h1>Look! The text changed again!</h1>
-    <button id="authorize-button">Authorize</button>
-    <button id="signout-button">Sign Out</button>
+    <h1>Welcome to grand.family</h1>
+    <form class="user-form">
+      <label for="name"></label>
+      <input class="name-input" type="text" name="name" placeholder="Name">
+      <button class="user-form-button" type="button">Find Me</button>
+    </form>
+
+    <div class="user-info">
+      <p class="name"></p>
+      <p class="family"></p>
+    </div>
 
     <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-analytics.js"></script>
@@ -30,6 +38,7 @@
          firebase.initializeApp(firebaseConfig);
       }
     </script>
+    <script type="module" src="js/members.js"></script>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>
