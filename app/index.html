@@ -10,12 +10,33 @@
     <button id="authorize-button">Authorize</button>
     <button id="signout-button">Sign Out</button>
 
-    <script src="js/auth.js"></script>
-    <script src="js/sheets-api.js"></script>
-    <script type="module" src="js/main.js"></script>
-    <script async defer src="https://apis.google.com/js/api.js"
-      onload="this.onload=function(){};handleClientLoad()"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyAUhXhjcTdtb0hUEjXre5fKKepHQWhlZzo",
+        authDomain: "grandfamily-a6c9a.firebaseapp.com",
+        databaseURL: "https://grandfamily-a6c9a.firebaseio.com",
+        projectId: "grandfamily-a6c9a",
+        storageBucket: "grandfamily-a6c9a.appspot.com",
+        messagingSenderId: "736545739477",
+        appId: "1:736545739477:web:bf3194a23a9deb06be485c",
+        measurementId: "G-GJGZY3Q53M"
+      };
+
+      // Initialize Firebase
+      if (!firebase.apps.length) {
+         firebase.initializeApp(firebaseConfig);
+      }
     </script>
+    <script type="module" src="js/main.js"></script>
+
   </body>
 </html>
