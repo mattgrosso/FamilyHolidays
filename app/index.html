@@ -4,19 +4,41 @@
     <title>Hello</title>
     <link rel="stylesheet" href="css/styles.css">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   </head>
   <body>
-    <h1>Welcome to grand.family</h1>
-    <form class="user-form">
-      <label for="name"></label>
-      <input class="name-input" type="text" name="name" placeholder="Name">
-      <button class="user-form-button" type="button">Find Me</button>
-    </form>
-
-    <div class="user-info">
-      <p class="name"></p>
-      <p class="family"></p>
+    <div class="nav">
+      <ul>
+        <li class="nav-item" data-option-value="christmas-drawing">Who did I draw for Christmas?</li>
+        <li class="nav-item" data-option-value="thanksgiving-host">Where is Thanksgiving this year?</li>
+        <li class="nav-item" data-option-value="christmas-host">Where is Christmas Eve this year?</li>
+      </ul>
     </div>
+
+    <section class="home-page active">
+      <h1>Welcome to grand.family</h1>
+      <p>A handy place to remember things about our family.</p>
+
+      <div class="home-page-options">
+        <ul>
+          <li class="nav-item" data-option-value="christmas-drawing">Who did I draw for Christmas?</li>
+          <li class="nav-item" data-option-value="thanksgiving-host">Where is Thanksgiving this year?</li>
+          <li class="nav-item" data-option-value="christmas-host">Where is Christmas Eve this year?</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="christmas-drawing">
+      <h1>Christmas Drawing</h1>
+    </section>
+
+    <section class="thanksgiving-host">
+      <h1>Thanksgiving</h1>
+    </section>
+
+    <section class="christmas-host">
+      <h1>Christmas Eve</h1>
+    </section>
 
     <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-analytics.js"></script>

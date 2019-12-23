@@ -17,20 +17,14 @@ db.collection("members").get()
   })
 
 const initialize = () => {
-  document.querySelector(".user-form-button").addEventListener("click", function (event) {
-    event.preventDefault();
+  document.querySelectorAll(".nav-item").forEach((item) => {
+    item.addEventListener("click", (event) => {
+      const navValue = event.target.dataset.optionValue;
 
-    const nameInput = document.querySelector(".name-input");
-    const nameElement = document.querySelector(".user-info .name");
-    const familyElement = document.querySelector(".user-info .family");
-
-    const name = nameInput.value;
-
-    const foundMember = memberList.find((member) => {
-      return member.name.full.toLowerCase().includes(name)
+      document.querySelectorAll(".active").forEach((each) => {
+        each.classList.remove("active");
+      });
+      document.querySelector(`section.${navValue}`).classList.add("active");
     })
-
-    nameElement.innerText = foundMember.name.full;
-    familyElement.innerText = foundMember.family;
   })
 }
