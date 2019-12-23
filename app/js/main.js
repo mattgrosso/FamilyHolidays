@@ -2,7 +2,7 @@
 const db = firebase.firestore();
 const memberList = [];
 let memberListReady = false;
-let currentUser;
+let currentUser = localStorage.getItem("user");
 
 db.collection("members").get()
   .then((members) => {
@@ -51,7 +51,7 @@ function buildUserNameSelector() {
 
     userNameOption.addEventListener("click", (event) => {
       currentUser = event.target.dataset.userNameOption
-      console.log("currentUser: ", currentUser);
+      window.localStorage.setItem("user", currentUser)
     });
 
     usersNameSelector.appendChild(userNameOption);
