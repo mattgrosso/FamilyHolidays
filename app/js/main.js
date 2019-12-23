@@ -23,14 +23,21 @@ const initialize = () => {
 }
 
 function setUpNavEvents() {
+  document.querySelector(".menu-toggle").addEventListener("click", () => {
+    const menu = document.querySelector(".header .hamburger-menu");
+
+    menu.classList.toggle("active");
+  })
+
   document.querySelectorAll(".nav-item").forEach((item) => {
     item.addEventListener("click", (event) => {
       const navValue = event.target.dataset.optionValue;
 
-      document.querySelectorAll(".active").forEach((each) => {
+      document.querySelectorAll("section.active").forEach((each) => {
         each.classList.remove("active");
       });
       document.querySelector(`section.${navValue}`).classList.add("active");
+      document.querySelector(".hamburger-menu").classList.remove("active");
     })
   })
 }

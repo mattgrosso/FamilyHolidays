@@ -2,22 +2,27 @@
 <html lang="en" dir="ltr">
   <head>
     <title>Grand.family</title>
+    <script src="https://kit.fontawesome.com/29858a5690.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   </head>
   <body>
-    <div class="nav">
-      <ul>
+    <div class="header">
+      <div class="nav">
+        <i class="menu-toggle fas fa-bars"></i>
+        <h1 class="nav-item" data-option-value="home-page">Grand.family</h1>
+      </div>
+      <ul class="hamburger-menu">
         <li class="nav-item" data-option-value="christmas-drawing">Who did I draw for Christmas?</li>
         <li class="nav-item" data-option-value="thanksgiving-host">Where is Thanksgiving this year?</li>
         <li class="nav-item" data-option-value="christmas-host">Where is Christmas Eve this year?</li>
       </ul>
     </div>
 
-    <section class="home-page">
-      <h1>Welcome to Grand.family</h1>
-      <p>A handy place to remember things about our family.</p>
+    <section class="home-page active">
+      <h2>How can I help you?</h2>
 
       <div class="home-page-options">
         <ul>
@@ -28,7 +33,7 @@
       </div>
     </section>
 
-    <section class="christmas-drawing active">
+    <section class="christmas-drawing">
       <h1>Who did I draw for Christmas?</h1>
       <ul class="users-name-selector"></ul>
     </section>
