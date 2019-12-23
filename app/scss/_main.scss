@@ -5,3 +5,11 @@ section {
     display: block;
   }
 }
+
+.christmas-drawing {
+  .user-name-option {
+    h2 {
+      pointer-events: none;
+    }
+  }
+}
