@@ -18,6 +18,7 @@
         <li class="nav-item" data-option-value="christmas-drawing">Who did I draw for Christmas?</li>
         <li class="nav-item" data-option-value="thanksgiving-host">Where is Thanksgiving this year?</li>
         <li class="nav-item" data-option-value="christmas-host">Where is Christmas Eve this year?</li>
+        <li class="nav-item" data-option-value="draw-names">Draw names</li>
       </ul>
     </div>
 
@@ -29,14 +30,19 @@
           <li class="nav-item" data-option-value="christmas-drawing">Who did I draw for Christmas?</li>
           <li class="nav-item" data-option-value="thanksgiving-host">Where is Thanksgiving this year?</li>
           <li class="nav-item" data-option-value="christmas-host">Where is Christmas Eve this year?</li>
+          <li class="nav-item" data-option-value="draw-names">Draw names</li>
         </ul>
       </div>
     </section>
 
-    <section class="christmas-drawing active">
+    <section class="christmas-drawing">
       <h2></h2>
       <h3></h3>
       <ul class="users-name-selector"></ul>
+    </section>
+
+    <section class="draw-names active">
+      <button class="draw-names">Draw Names</button>
     </section>
 
     <section class="thanksgiving-host">
@@ -67,7 +73,7 @@
          firebase.initializeApp(firebaseConfig);
       }
     </script>
-    <script type="module" src="js/members.js"></script>
+    <!-- <script type="module" src="js/members.js"></script> -->
     <script type="module" src="js/main.js"></script>
   </body>
 </html>

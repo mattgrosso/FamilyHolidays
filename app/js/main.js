@@ -1,10 +1,11 @@
 /*jshint esversion: 6 */
 const db = firebase.firestore();
+const members = db.collection("members");
 const memberList = [];
 let memberListReady = false;
-let currentUser = localStorage.getItem("user");
+let currentUser = JSON.parse(localStorage.getItem("user"));
 
-db.collection("members").get()
+members.get()
   .then((members) => {
     members.forEach((member) => {
       memberList.push({id: member.id, ...member.data()});
@@ -21,6 +22,42 @@ const initialize = () => {
   setUpNavEvents();
   initializeChristmasDrawSection();
 }
+
+function doDrawing(oldCount) {
+  let newCount = oldCount || 0;
+  let remainingNames = memberList;
+
+  if (newCount === 50) {
+    debugger;
+  }
+
+  memberList.forEach((member) => {
+    const eligiblePool = remainingNames.filter((target) => {
+      const samePool = target.secretSanta.pool === member.secretSanta.pool;
+      const notSameFamily = target.family !== member.family;
+
+      return samePool && notSameFamily;
+    });
+
+    if (eligiblePool.length) {
+      const randomDraw = eligiblePool[Math.floor(Math.random() * eligiblePool.length)];
+
+      remainingNames = remainingNames.filter((name) => {
+        return randomDraw.id !== name.id;
+      });
+
+      members.doc(member.id).update({
+        "secretSanta.currentDrawing": randomDraw.name.nick || randomDraw.name.first
+      })
+    } else {
+      doDrawing(newCount++);
+    }
+  });
+}
+
+document.querySelector(".draw-names").addEventListener("click", () => {
+  doDrawing();
+})
 
 function setUpNavEvents() {
   document.querySelector(".menu-toggle").addEventListener("click", () => {
@@ -66,6 +103,11 @@ function initializeChristmasDrawSection() {
   }
 }
 
+function clearUser() {
+  window.localStorage.setItem("user", null);
+  currentUser = null;
+}
+
 function buildUserSelector() {
   const usersNameSelector = document.querySelector(".users-name-selector");
 
@@ -82,7 +124,7 @@ function buildUserSelector() {
 
     userNameOption.addEventListener("click", (event) => {
       currentUser = event.target.dataset.userNameOption;
-      window.localStorage.setItem("user", currentUser);
+      window.localStorage.setItem("user", JSON.stringify(currentUser));
       initializeChristmasDrawSection();
     });
 
@@ -110,7 +152,7 @@ function buildNameRevealerFor(userId) {
 
   thatIsMeButton.addEventListener("click", () => {
     revealerElement.classList.add("hidden");
-    christmasDrawingHeadline.innerText = `${user.name.nick || user.name.first}`
+    christmasDrawingHeadline.innerText = `${user.name.nick || user.name.first}`;
     christmasDrawingSubline.classList.add("hidden");
     document.querySelector(".drawn-name").classList.remove("hidden");
   })
@@ -120,7 +162,7 @@ function buildNameRevealerFor(userId) {
   notMeButton.classList.add("not-me");
 
   notMeButton.addEventListener("click", () => {
-    currentUser = null;
+    clearUser();
     initializeChristmasDrawSection();
   })
 
@@ -136,8 +178,17 @@ function buildNameRevealerFor(userId) {
   const drawnNameElement = document.createElement("h2");
   drawnNameElement.innerText = `${user.secretSanta.currentDrawing}`;
 
+  const clearDrawnNameSection = document.createElement("button");
+  clearDrawnNameSection.classList.add("start-over");
+  clearDrawnNameSection.innerText = "Start Over";
+  clearDrawnNameSection.addEventListener("click", () => {
+    clearUser();
+    initializeChristmasDrawSection();
+  })
+
   drawnNameSection.appendChild(drawnNameHeadline);
   drawnNameSection.appendChild(drawnNameElement);
+  drawnNameSection.appendChild(clearDrawnNameSection);
 
   christmasDrawingSection.appendChild(revealerElement);
   christmasDrawingSection.appendChild(drawnNameSection);
