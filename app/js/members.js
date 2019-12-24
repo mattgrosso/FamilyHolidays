@@ -12,7 +12,8 @@ members.doc("marie-dennis").set({
   },
   family: "Dennis",
   secretSanta: {
-    pool: "adults"
+    pool: "adults",
+    currentDrawing: "Felix"
   }
 });
 
@@ -26,7 +27,8 @@ members.doc("bethann-slater").set({
   },
   family: "Slater",
   secretSanta: {
-    pool: "adults"
+    pool: "adults",
+    currentDrawing: "Felix"
   }
 });
 
@@ -40,7 +42,8 @@ members.doc("rucker-slater").set({
   },
   family: "Slater",
   secretSanta: {
-    pool: "adults"
+    pool: "adults",
+    currentDrawing: "Felix"
   }
 });
 
@@ -53,7 +56,8 @@ members.doc("cassella-slater").set({
   },
   family: "Slater",
   secretSanta: {
-    pool: "adults"
+    pool: "adults",
+    currentDrawing: "Felix"
   }
 });
 
@@ -67,7 +71,8 @@ members.doc("megann-smith").set({
   },
   family: "Slater",
   secretSanta: {
-    pool: "adults"
+    pool: "adults",
+    currentDrawing: "Felix"
   }
 });
 
@@ -79,7 +84,8 @@ members.doc("adam-smith").set({
   },
   family: "Slater",
   secretSanta: {
-    pool: "adults"
+    pool: "adults",
+    currentDrawing: "Felix"
   }
 });
 
@@ -93,7 +99,8 @@ members.doc("cati-adele-slater").set({
   },
   family: "Slater",
   secretSanta: {
-    pool: "adults"
+    pool: "adults",
+    currentDrawing: "Felix"
   }
 });
 
@@ -107,7 +114,8 @@ members.doc("bobby-slater").set({
   },
   family: "Slater",
   secretSanta: {
-    pool: "adults"
+    pool: "adults",
+    currentDrawing: "Felix"
   }
 });
 
@@ -121,7 +129,8 @@ members.doc("cathi-grosso").set({
   },
   family: "Grosso-Gasteyer",
   secretSanta: {
-    pool: "adults"
+    pool: "adults",
+    currentDrawing: "Felix"
   }
 });
 
@@ -133,7 +142,8 @@ members.doc("stephen-gasteyer").set({
   },
   family: "Grosso-Gasteyer",
   secretSanta: {
-    pool: "adults"
+    pool: "adults",
+    currentDrawing: "Felix"
   }
 });
 
@@ -145,7 +155,8 @@ members.doc("marie-adele-gasteyer-grosso").set({
   },
   family: "Grosso-Gasteyer",
   secretSanta: {
-    pool: "kids"
+    pool: "kids",
+    currentDrawing: "Felix"
   }
 });
 
@@ -158,7 +169,8 @@ members.doc("michael-grosso").set({
   },
   family: "Grosso",
   secretSanta: {
-    pool: "adults"
+    pool: "adults",
+    currentDrawing: "Felix"
   }
 });
 
@@ -170,7 +182,8 @@ members.doc("lesley-grosso").set({
   },
   family: "Grosso",
   secretSanta: {
-    pool: "adults"
+    pool: "adults",
+    currentDrawing: "Felix"
   }
 });
 
@@ -182,7 +195,8 @@ members.doc("felix-grosso").set({
   },
   family: "Grosso",
   secretSanta: {
-    pool: "kids"
+    pool: "kids",
+    currentDrawing: "Felix"
   }
 });
 
@@ -195,7 +209,8 @@ members.doc("david-grosso").set({
   },
   family: "Grosso-Sippel",
   secretSanta: {
-    pool: "adults"
+    pool: "adults",
+    currentDrawing: "Felix"
   }
 });
 
@@ -207,7 +222,8 @@ members.doc("serra-sippel").set({
   },
   family: "Grosso-Sippel",
   secretSanta: {
-    pool: "adults"
+    pool: "adults",
+    currentDrawing: "Felix"
   }
 });
 
@@ -220,7 +236,8 @@ members.doc("christine-patrick").set({
   },
   family: "Patrick",
   secretSanta: {
-    pool: "adults"
+    pool: "adults",
+    currentDrawing: "Felix"
   }
 });
 
@@ -234,7 +251,8 @@ members.doc("brian-patrick").set({
   },
   family: "Patrick",
   secretSanta: {
-    pool: "adults"
+    pool: "adults",
+    currentDrawing: "Felix"
   }
 });
 
@@ -247,7 +265,8 @@ members.doc("lauren-patrick").set({
   },
   family: "Patrick",
   secretSanta: {
-    pool: "adults"
+    pool: "adults",
+    currentDrawing: "Felix"
   }
 });
 
@@ -259,7 +278,8 @@ members.doc("jonathon-patrick").set({
   },
   family: "Patrick",
   secretSanta: {
-    pool: "kids"
+    pool: "kids",
+    currentDrawing: "Felix"
   }
 });
 
@@ -273,7 +293,8 @@ members.doc("matthew-grosso").set({
   },
   family: "Grosso-Seltzer",
   secretSanta: {
-    pool: "adults"
+    pool: "adults",
+    currentDrawing: "Felix"
   }
 });
 
@@ -286,7 +307,8 @@ members.doc("matthew-grosso").set({
   },
   family: "Grosso-Seltzer",
   secretSanta: {
-    pool: "adults"
+    pool: "adults",
+    currentDrawing: "Felix"
   }
 });
 
@@ -299,6 +321,7 @@ members.doc("natalie-grosso").set({
   },
   family: "Grosso-Seltzer",
   secretSanta: {
-    pool: "kids"
+    pool: "kids",
+    currentDrawing: "Felix"
   }
 });

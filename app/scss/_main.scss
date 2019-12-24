@@ -3,6 +3,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .header {
   .nav {
     align-items: center;
@@ -12,7 +16,7 @@ body {
     flex-wrap: wrap;
     font-size: 1.5rem;
     justify-content: space-between;
-    padding: 10px 15px;
+    padding: 15px;
 
     .menu-toggle {
       cursor: pointer;
@@ -20,6 +24,7 @@ body {
   }
 
   ul {
+    background-color: $color-1;
     max-height: 0;
     overflow: hidden;
     position: absolute;
@@ -31,8 +36,10 @@ body {
     }
 
     .nav-item {
+      border-radius: 3px;
       color: $white;
       display: block;
+      margin: 10px;
       padding: 15px;
       text-align: center;
 
@@ -55,15 +62,20 @@ section {
   &.active {
     display: block;
   }
-}
 
-.home-page {
   h2 {
     font-size: 2rem;
     padding: 24px 0;
     text-align: center;
   }
 
+  h3 {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+.home-page {
   ul {
     .nav-item {
       background-color: $color-4;
@@ -77,9 +89,64 @@ section {
 }
 
 .christmas-drawing {
-  .user-name-option {
-    h2 {
-      pointer-events: none;
+  &.user {
+    .users-name-selector {
+      display: none;
     }
+  }
+
+  .users-name-selector {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 24px 12px;
+
+    .user-name-option {
+      align-items: center;
+      background-color: $color-4;
+      border-radius: 3px;
+      box-sizing: border-box;
+      color: $white;
+      display: flex;
+      justify-content: center;
+      margin: 5px;
+      padding: 32px 16px;
+      text-align: center;
+      width: calc(50% - 10px);
+
+      h4 {
+        pointer-events: none;
+      }
+    }
+  }
+
+  .christmas-drawing-revealer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24px 0;
+
+    button {
+      border-radius: 3px;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      margin: 10px;
+      padding: 24px;
+      width: 100%;
+
+      &.not-me {
+        background-color: $color-6;
+        color: $white;
+      }
+
+      &.yes-me {
+        background-color: $color-4;
+        color: $white;
+      }
+    }
+  }
+
+  .drawn-name {
+    padding: 24px 0;
+    text-align: center;
   }
 }
