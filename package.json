@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/mattgrosso/FamilyHoliidays#readme",
   "dependencies": {
+    "date-holidays": "^1.4.12",
     "firebase": "^7.6.0"
   },
   "devDependencies": {

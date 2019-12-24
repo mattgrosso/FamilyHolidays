@@ -169,3 +169,19 @@ section {
     font-size: 1rem;
     margin: 50px 0;
     padding: 12px 24px; }
+
+.hosting-message {
+  background-color: #2b7340;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 1.25rem;
+  margin: 0 12px;
+  padding: 12px 16px; }
+  .hosting-message:nth-of-type(1) {
+    padding-top: 24px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; }
+  .hosting-message:nth-of-type(2) {
+    padding-bottom: 24px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0; }

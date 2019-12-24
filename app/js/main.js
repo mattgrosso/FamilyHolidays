@@ -3,6 +3,9 @@ const db = firebase.firestore();
 const members = db.collection("members");
 const memberList = [];
 let memberListReady = false;
+const hostingSchedule = db.collection("hosting");
+const hostScheduleList = {};
+let scheduleListReady = false;
 let currentUser = JSON.parse(localStorage.getItem("user"));
 
 members.get()
@@ -10,8 +13,16 @@ members.get()
     members.forEach((member) => {
       memberList.push({id: member.id, ...member.data()});
     })
-
     memberListReady = true;
+
+    hostingSchedule.get()
+      .then((schedules) => {
+        schedules.forEach((schedule) => {
+          hostScheduleList[schedule.id] = schedule.data();
+        })
+        scheduleListReady = true;
+        initializeHolidaySchedules();
+      })
     initialize();
   })
   .catch((error) => {
@@ -28,7 +39,8 @@ function doDrawing(oldCount) {
   let remainingNames = memberList;
 
   if (newCount === 50) {
-    debugger;
+    console.error("We got stuck in a loop...");
+    return;
   }
 
   memberList.forEach((member) => {
@@ -101,6 +113,34 @@ function initializeChristmasDrawSection() {
     christmasDrawingSubline.innerText = ""
     buildNameRevealerFor(currentUser);
   }
+}
+
+function initializeHolidaySchedules() {
+  const currentYear = new Date().getFullYear();
+
+  const thanksgivingSection = document.querySelector(".thanksgiving-host");
+  const thanksgivingText1 = document.createElement("h4");
+  const thanksgivingText2 = document.createElement("h4");
+  thanksgivingText1.classList.add("hosting-message");
+  thanksgivingText2.classList.add("hosting-message");
+
+  thanksgivingText1.innerText =`In ${currentYear}, the ${hostScheduleList["thanksgiving"][currentYear]} are hosting Thanksgiving.`;
+  thanksgivingText2.innerText = `In ${currentYear + 1} the ${hostScheduleList["thanksgiving"][currentYear + 1]} are hosting.`;
+
+  thanksgivingSection.appendChild(thanksgivingText1);
+  thanksgivingSection.appendChild(thanksgivingText2);
+
+  const christmasSection = document.querySelector(".christmas-host");
+  const christmasText1 = document.createElement("h4");
+  const christmasText2 = document.createElement("h4");
+  christmasText1.classList.add("hosting-message");
+  christmasText2.classList.add("hosting-message");
+
+  christmasText1.innerText = `In ${currentYear}, the ${hostScheduleList["christmas-eve"][currentYear]} are hosting Christmas.`;
+  christmasText2.innerText = `In ${currentYear + 1} the ${hostScheduleList["christmas-eve"][currentYear + 1]} are hosting.`;
+
+  christmasSection.appendChild(christmasText1);
+  christmasSection.appendChild(christmasText2);
 }
 
 function clearUser() {
