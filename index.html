@@ -1,1 +1,79 @@
-app/index.html
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Grand.family</title>
+    <script src="https://kit.fontawesome.com/29858a5690.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="nav">
+        <i class="menu-toggle fas fa-bars"></i>
+        <h1 class="nav-item" data-option-value="home-page">Grand.family</h1>
+      </div>
+      <ul class="hamburger-menu">
+        <li class="nav-item" data-option-value="christmas-drawing">Who did I draw for Christmas?</li>
+        <li class="nav-item" data-option-value="thanksgiving-host">Where is Thanksgiving this year?</li>
+        <li class="nav-item" data-option-value="christmas-host">Where is Christmas Eve this year?</li>
+        <li class="nav-item" data-option-value="draw-names">Draw names</li>
+      </ul>
+    </div>
+
+    <section class="home-page">
+      <h2>How can I help you?</h2>
+
+      <div class="home-page-options">
+        <ul>
+          <li class="nav-item" data-option-value="christmas-drawing">Who did I draw for Christmas?</li>
+          <li class="nav-item" data-option-value="thanksgiving-host">Where is Thanksgiving this year?</li>
+          <li class="nav-item" data-option-value="christmas-host">Where is Christmas Eve this year?</li>
+          <li class="nav-item" data-option-value="draw-names">Draw names</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="christmas-drawing">
+      <h2></h2>
+      <h3></h3>
+      <ul class="users-name-selector"></ul>
+    </section>
+
+    <section class="draw-names active">
+      <button class="draw-names">Draw Names</button>
+    </section>
+
+    <section class="thanksgiving-host">
+      <h2>Thanksgiving</h2>
+    </section>
+
+    <section class="christmas-host">
+      <h2>Christmas Eve</h2>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyAUhXhjcTdtb0hUEjXre5fKKepHQWhlZzo",
+        authDomain: "grandfamily-a6c9a.firebaseapp.com",
+        databaseURL: "https://grandfamily-a6c9a.firebaseio.com",
+        projectId: "grandfamily-a6c9a",
+        storageBucket: "grandfamily-a6c9a.appspot.com",
+        messagingSenderId: "736545739477",
+        appId: "1:736545739477:web:bf3194a23a9deb06be485c",
+        measurementId: "G-GJGZY3Q53M"
+      };
+
+      if (!firebase.apps.length) {
+         firebase.initializeApp(firebaseConfig);
+      }
+    </script>
+    <!-- <script type="module" src="js/members.js"></script> -->
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
