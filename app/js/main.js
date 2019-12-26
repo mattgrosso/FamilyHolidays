@@ -182,6 +182,7 @@ function buildNameRevealerFor(userId) {
 
   christmasDrawingHeadline.innerText = `${user.name.full}`
   christmasDrawingSubline.innerText = `If you're not ${user.name.nick || user.name.first}, you're in the wrong place.`
+  christmasDrawingSubline.classList.remove("hidden");
 
   const revealerElement = document.createElement("div");
   revealerElement.classList.add("christmas-drawing-revealer");
